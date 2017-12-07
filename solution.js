@@ -1,9 +1,11 @@
 'use strict';
 
-// Set a timeout of 300ms
+var promise = new Promise(function (fulfill, reject) {
+	// Your solution here
+	setTimeout(function(){
+		fulfill('FULFILLED!')
+	}, 300)
+});
 
-setTimeout(function () {
-	// After 300ms has elapsed, print out 'TIMED OUT!'
-
-	console.log('TIMED OUT!');
-}, 300);
+// Your solution here
+promise.then(console.log);
